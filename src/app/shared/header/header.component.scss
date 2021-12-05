@@ -1,0 +1,79 @@
+@import ".././assets/scss/cp-sidebar";
+.more-wrap {
+    display: flex;
+}
+
+.active {
+    background: white;
+    color: black;
+}
+
+.main {
+    display: flex;
+}
+
+.image {
+    width: 25px;
+}
+img {
+    width: 1rem;
+    margin-left: 0.2rem;
+    height: 1rem;
+    margin-top: 0.5rem;
+}
+
+.header {
+    background: white;
+    position: fixed;
+    width: unset;
+    left: 15rem;
+    height: 53px;
+    top: 0;
+    box-shadow: 0 0 13px 0 #edf1ff;
+    border: solid 0.6px #edf1ff;
+    display: flex;
+    align-items: center;
+    right: 0;
+    justify-content: space-between;
+    .first-div {
+        // width: 40%;
+    }
+    .second-div {
+        display: flex;
+        align-items: center;
+        margin-right: 1rem;
+        .item-first {
+            margin-right: 1rem;
+        }
+        .profile {
+            display: flex;
+            margin: 0rem 1rem 0rem 1rem;
+            .profile-img{
+                width: 2.5rem;
+                height: 2.5rem;
+                margin-right: 0.5rem;
+                border-radius: 50%;
+                .user-img {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+            .name {
+                margin-top: 0.9rem;
+            }
+            .down-arrow {
+                margin-top: 1rem;
+            }
+        }
+        .live-img {
+            background: red;
+            width: 0.6rem;
+            height: 0.6rem;
+            margin-right: 0.5rem;
+            border-radius: 50%;
+        }
+        .new-img {
+            margin-left: 0.5rem;
+        }
+    }
+}

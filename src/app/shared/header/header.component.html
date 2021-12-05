@@ -1,0 +1,236 @@
+
+<div class="main">
+  <div class="cp-sidebar" id="sidebar">
+      <div class="top-section">
+          <div class="logo-wrap">
+              <a class="logo"> LOGO
+                <!-- <img src="assets/images/tml-logo.svg" alt="" /> -->
+              </a>
+          </div>
+          <ul class="nav-list">
+            <li
+              class="nav-item"
+              [class.active]="dashboard"
+              (click)="toggleMoreLinkSideBar($event,'dashboard'); setWindowScrollToTop()">
+              <a class="nav-link">
+                <div class="mod-icon-text">
+                  <span class="icon icon-plan"></span>
+                  <span class="text">Dashboard</span>
+                </div>
+              </a>
+            </li>
+
+            <li
+            class="nav-item"
+            [class.active]="transactions"
+            (click)="toggleMoreLinkSideBar($event, 'transactions'); setWindowScrollToTop()">
+              <a class="nav-link">
+                <div class="mod-icon-text">
+                  <span class="icon icon-plan"></span>
+                  <span class="text">Transactions</span>
+                </div>
+              </a>
+            </li>
+      
+            <li
+              class="nav-item"
+              [class.active]="settiments"
+              (click)="toggleMoreLinkSideBar($event,'settiments'); setWindowScrollToTop()"
+            >
+              <a class="nav-link">
+                <div class="mod-icon-text">
+                  <span class="icon icon-plan"></span>
+                  <span class="text">Settiements</span>
+                </div>
+              </a>
+            </li>
+            <li
+            class="nav-item"
+            [class.active]="refund"
+            (click)="toggleMoreLinkSideBar($event, 'refund'); setWindowScrollToTop()">
+            <a class="nav-link">
+              <div class="mod-icon-text">
+                <span class="icon icon-plan"></span>
+                <span class="text">Refund</span>
+              </div>
+            </a>
+            </li>
+
+            <li
+            class="nav-item"
+            [class.active]="report"
+            (click)="toggleMoreLinkSideBar($event, 'report'); setWindowScrollToTop()">
+            <a class="nav-link">
+              <div class="mod-icon-text">
+                <span class="icon icon-plan"></span>
+                <span class="text">Reports</span>
+              </div>
+            </a>
+            </li>
+            <li
+              class="nav-item"
+              [class.active]="dispute"
+              (click)="toggleMoreLinkSideBar($event,'dispute'); setWindowScrollToTop()">
+              <a class="nav-link">
+                <div class="mod-icon-text">
+                  <span class="icon icon-plan"></span>
+                  <span class="text">Dispute</span>
+                </div>
+              </a>
+            </li>
+      
+            <li
+              class="nav-item"
+              [class.active]="service_alert"
+              (click)="toggleMoreLinkSideBar($event,'service_alert'); setWindowScrollToTop()">
+              <a class="nav-link">
+                <div class="mod-icon-text">
+                  <span class="icon icon-plan"></span>
+                  <span class="text">Service Alerts</span>
+                </div>
+              </a>
+            </li>
+      
+            <li
+              class="nav-item"
+              [class.active]="payment_link"
+              (click)="toggleMoreLinkSideBar($event, 'payment_link'); setWindowScrollToTop()">
+              <a class="nav-link">
+                <div class="mod-icon-text">
+                  <span class="icon icon-plan"></span>
+                  <span class="text">Payment Link</span>
+                </div>
+              </a>
+            </li>
+
+            <li
+            class="nav-item"
+            [class.active]="payment_page"
+            (click)="toggleMoreLinkSideBar($event, 'payment_page'); setWindowScrollToTop()">
+            <a class="nav-link">
+              <div class="mod-icon-text">
+                <span class="icon icon-plan"></span>
+                <span class="text">Payment Page</span>
+              </div>
+            </a>
+            </li>
+
+            <li
+            class="nav-item"
+            [class.active]="setting"
+            (click)="toggleMoreLinkSideBar($event, 'setting'); setWindowScrollToTop()">
+            <a class="nav-link">
+              <div class="mod-icon-text">
+                <span class="icon icon-plan"></span>
+                <span class="text">Settings</span>
+              </div>
+            </a>
+            </li>
+            <li
+            class="nav-item"
+            [class.active]="my_profile"
+            (click)="toggleMoreLinkSideBar($event, 'my_profile'); setWindowScrollToTop()">
+            <a class="nav-link">
+              <div class="mod-icon-text">
+                <span class="icon icon-plan"></span>
+                <span class="text">My Profile</span>
+              </div>
+            </a>
+            </li>
+            <li
+            class="nav-item"
+            [class.active]="manage_team"
+            (click)="toggleMoreLinkSideBar($event, 'manage_team'); setWindowScrollToTop()">
+            <a class="nav-link">
+              <div class="mod-icon-text">
+                <span class="icon icon-plan"></span>
+                <span class="text">Manage_team</span>
+              </div>
+            </a>
+            </li>
+          </ul>
+      </div>
+  
+      <!-- For Portal Navigation Bar -->
+      <!-- <div class="more-wrap">
+        <perfect-scrollbar class="custom-scrollbar">
+          <ul class="sub-list">
+              <li
+                class="more-item"
+                [ngClass]="{ active: activePageToggle.locations }"
+                (click)="toggleMoreLink($event); setWindowScrollToTop()"
+              >
+                <a href="#"  class="link"
+                  >Location</a
+                >
+              </li>
+              <li
+                class="more-item"
+                [ngClass]="{ active: activePageToggle.geofence }"
+                (click)="toggleMoreLink($event); setWindowScrollToTop()"
+              >
+                <a href="#" class="link"
+                  >Geofence</a
+                >
+              </li>
+              <li
+                class="more-item"
+                [ngClass]="{ active: activePageToggle.corridor }"
+                (click)="toggleMoreLink($event); setWindowScrollToTop()"
+              >
+                <a href="#"  class="link"
+                  >Corridor</a
+                >
+              </li>
+              <li
+                class="more-item"
+                [ngClass]="{ active: activePageToggle.branches }"
+                (click)="toggleMoreLink($event); setWindowScrollToTop()"
+              >
+                <a href="#" class="link"
+                  >Branch</a
+                >
+              </li>
+              <li
+                class="more-item"
+                [ngClass]="{ active: activePageToggle.offices }"
+                (click)="toggleMoreLink($event); setWindowScrollToTop()"
+              >
+                <a class="link" >Office</a>
+              </li>
+              <li
+                class="more-item"
+                [ngClass]="{ active: activePageToggle.materials }"
+                (click)="toggleMoreLink($event); setWindowScrollToTop()"
+              >
+                <a class="link">Material</a>
+              </li>
+            </ul>
+        </perfect-scrollbar>
+        <div  class="logout-link show-on-mobile">
+          <span class="">Logout</span>
+        </div>
+      </div> -->
+  </div>
+
+  <div class="header">
+    <div class="first-div">
+      <span><img class="image" src=".././../../assets/images/menu.png"></span>
+    </div>
+    <div class="second-div">
+      <span class="item-first">GST Details</span>
+      <span class="live-img"> </span>
+      <span class="item-second">Live Mode</span>
+      <span><img class="img" src=".././../../assets/images/down-arrow.png"></span>
+      <span class="new-img"><img class="image" src=".././../../assets/images/folder.png"></span>
+      <span class=""><img class="image" src=".././../../assets/images/bell.png"></span>
+      <span class="profile">
+        <!-- <div><div> -->
+        <span class="profile-img"><img class="user-img" src=".././../../assets/images/user.png"></span>
+        <span class="name">Harry</span>
+        <img class="down-arrow" src=".././../../assets/images/arrow-down-sign-to-navigate.png">
+      </span>
+      <span class=""><img class="image" src=".././../../assets/images/setting.png"></span>
+    </div>
+  </div>
+</div>
